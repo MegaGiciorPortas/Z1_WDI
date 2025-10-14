@@ -2,8 +2,8 @@ def func(a):
     return a ** a - 2024
 
 
-l = 2
-r = 5
+l = int(input("l: "))
+r = int(input("r: "))
 eps = 1e-6
 while abs(r - l) > eps:
     m = (l + r) / 2

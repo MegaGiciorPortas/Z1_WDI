@@ -1,9 +1,11 @@
 s = float(input("S: "))
-a = 0
-b = 1
+a = 1
 eps = 1e-6
+diff = -a
 
-while abs(b - a) > eps:
-    a = b
-    b = (s / b + b) / 2
-print(b)
+while abs(diff) > eps:
+    diff = -a
+    a = (S / a + a) / 2
+    diff += a
+
+print()
