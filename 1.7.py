@@ -5,7 +5,7 @@ diff = -a
 
 while abs(diff) > eps:
     diff = -a
-    a = (S / a + a) / 2
+    a = (s / a + a) / 2
     diff += a
 
 print()
