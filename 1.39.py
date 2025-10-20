@@ -1,27 +1,16 @@
-tablica = []
-n = -1
-suma = 0
-while n != 0:
-    n = int(input("n: "))
-    tablica.append(n)
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+d = int(input("d: "))
+e = int(input("e: "))
+wynik = ""
+while e != 0:
+    if c == (a + b + d + e) / 4:
+        wynik += str(c) + ", "
+    a = b
+    b = c
+    c = d
+    d = e
+    e = int(input("e: "))
 
-for i in range(len(tablica)):
-    if i == 0:
-        if tablica[i] == sum(tablica[1:5]) / 4:
-            print(tablica[i])
-    elif i == 1:
-        suma = tablica[i - 1] + sum(tablica[i + 1:i + 4])
-        if tablica[i] == suma / 4:
-            print(tablica[i])
-    elif i == len(tablica) - 2:
-        suma = sum(tablica[i - 3:i]) + tablica[i + 1]
-        if tablica[i] == suma / 4:
-            print(tablica[i])
-    elif i == len(tablica) - 1:
-        suma = sum(tablica[i - 4:i])
-        if tablica[i] == suma / 4:
-            print(tablica[i])
-    else:
-        suma = tablica[i - 2] + tablica[i - 1] + tablica[i + 2] + tablica[i + 1]
-        if tablica[i] == suma / 4:
-            print(tablica[i])
+print(wynik)
